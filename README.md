@@ -79,3 +79,16 @@ rails g scaffold friends first_name:string last_name:string email:string phone:s
 
 
 rails db:migrate
+
+Step 4: Adding Gem: devise
+
+gem 'devise', '~> 4.9'
+bundle install
+
+rails g devise:views
+
+rails generate devise MODEL
+
+rails db:migrate
+
+https://github.com/heartcombo/devise#getting-started
