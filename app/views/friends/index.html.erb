@@ -1,6 +1,26 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Friend List</h1>
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Frist Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @friends.each do |friend| %>
+      <tr>
+        <th><%= friend.first_name %></th>
+        <th><%= friend.last_name %></th>
+        <th><%= friend.email %></th>
+        <th><%= friend.phone %></th>
+        <th><%= friend.twitter %></th>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
 
 <div id="friends">
   <% @friends.each do |friend| %>
@@ -11,4 +31,4 @@
   <% end %>
 </div>
 
-<%= link_to "New friend", new_friend_path %>
+<%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
