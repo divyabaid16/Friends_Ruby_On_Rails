@@ -92,3 +92,7 @@ rails generate devise MODEL
 rails db:migrate
 
 https://github.com/heartcombo/devise#getting-started
+
+Step 5: Adding a new association (User friend)
+
+rails g migration add_user_id_to_friends user_id:integer:index
